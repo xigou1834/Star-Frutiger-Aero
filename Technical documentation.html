@@ -3,21 +3,724 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Star</title>
+  <title>技术文档 - Star</title>
+  
+  <meta name="description" content="Star 技术文档，包括 API 文档、开发指南和最佳实践。" />
+  
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
 </head>
 <body>
   <div id="header"></div>
 
   <main>
-    <section class="hero">
-        <div class="logo"><a href="https://github.com/xigou1834/Star" class="logo-link">Github</a></div>
-        <div class="logo"><a href="https://space.bilibili.com/3546717129542342" class="logo-link">bilibili</a></div>
-    </section>
+    <div class="documentation-layout">
+      <!-- 侧边栏导航 -->
+      <nav class="docs-sidebar">
+        <div class="sidebar-content">
+          <h2>文档导航</h2>
+          
+          <div class="nav-section">
+            <h3>快速开始</h3>
+            <ul>
+              <li><a href="#introduction" class="nav-link active">产品介绍</a></li>
+              <li><a href="#installation" class="nav-link">安装指南</a></li>
+              <li><a href="#quick-start" class="nav-link">快速上手</a></li>
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3>Star AI</h3>
+            <ul>
+              <li><a href="#ai-overview" class="nav-link">AI 概述</a></li>
+              <li><a href="#ai-api" class="nav-link">API 文档</a></li>
+              <li><a href="#ai-examples" class="nav-link">示例代码</a></li>
+              <li><a href="#ai-models" class="nav-link">模型说明</a></li>
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3>Star OS</h3>
+            <ul>
+              <li><a href="#os-concept" class="nav-link">设计理念</a></li>
+              <li><a href="#os-architecture" class="nav-link">系统架构</a></li>
+              <li><a href="#os-development" class="nav-link">开发进展</a></li>
+            </ul>
+          </div>
+          
+          <div class="nav-section">
+            <h3>BCS 项目</h3>
+            <ul>
+              <li><a href="#bcs-overview" class="nav-link">项目概述</a></li>
+              <li><a href="#bcs-development" class="nav-link">开发说明</a></li>
+              <li><a href="#bcs-contribute" class="nav-link">贡献指南</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <!-- 主内容区域 -->
+      <div class="docs-content">
+        <article class="documentation">
+          <header class="docs-header">
+            <h1>Star 技术文档</h1>
+            <p>欢迎来到 Star 技术文档中心，这里包含了所有产品的详细技术资料和开发指南。</p>
+          </header>
+          
+          <!-- 产品介绍 -->
+          <section id="introduction" class="doc-section">
+            <h2>产品介绍</h2>
+            <p>Star 是一个致力于打造下一代数字体验的技术公司。我们的产品线包括：</p>
+            
+            <div class="product-grid">
+              <div class="product-item">
+                <div class="product-icon">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <h3>Star AI</h3>
+                <p>下一代人工智能平台，提供智能对话、内容理解和自动化解决方案。</p>
+              </div>
+              
+              <div class="product-item">
+                <div class="product-icon">
+                  <i class="fas fa-desktop"></i>
+                </div>
+                <h3>Star OS</h3>
+                <p>下一代操作系统，以用户为中心，集成 AI 原生功能。</p>
+              </div>
+              
+              <div class="product-item">
+                <div class="product-icon">
+                  <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>BCS 项目</h3>
+                <p>战地指挥官模拟器，一个开源的策略游戏项目。</p>
+              </div>
+            </div>
+          </section>
+          
+          <!-- 安装指南 -->
+          <section id="installation" class="doc-section">
+            <h2>安装指南</h2>
+            <p>以下是各产品的安装方法：</p>
+            
+            <div class="code-block">
+              <h3>Star AI SDK</h3>
+              <pre><code class="language-bash"># npm 安装
+npm install @star/ai-sdk
+
+# yarn 安装  
+yarn add @star/ai-sdk
+
+# 或者使用 CDN
+&lt;script src="https://cdn.star-ai.com/sdk/latest/star-ai.min.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+            
+            <div class="code-block">
+              <h3>BCS 游戏开发套件</h3>
+              <pre><code class="language-bash"># 克隆仓库
+git clone https://github.com/xigou1834/Battlefield-Commander-Simulator.git
+
+# 进入项目目录
+cd Battlefield-Commander-Simulator
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev</code></pre>
+            </div>
+          </section>
+          
+          <!-- 快速上手 -->
+          <section id="quick-start" class="doc-section">
+            <h2>快速上手</h2>
+            <p>让我们从一个简单的示例开始：</p>
+            
+            <div class="code-block">
+              <h3>Star AI 基本用法</h3>
+              <pre><code class="language-javascript">import StarAI from '@star/ai-sdk';
+
+// 初始化 AI 实例
+const ai = new StarAI({
+  apiKey: 'your-api-key',
+  model: 'star-gpt-v1',
+  language: 'zh-CN'
+});
+
+// 发送消息
+async function chat() {
+  try {
+    const response = await ai.chat({
+      message: '你好，Star AI！',
+      context: '日常对话'
+    });
+    
+    console.log('回复:', response.content);
+  } catch (error) {
+    console.error('错误:', error);
+  }
+}
+
+chat();</code></pre>
+            </div>
+          </section>
+          
+          <!-- AI 概述 -->
+          <section id="ai-overview" class="doc-section">
+            <h2>Star AI 概述</h2>
+            <p>Star AI 是我们的旗舰产品，提供了以下核心功能：</p>
+            
+            <div class="feature-list">
+              <div class="feature-item">
+                <i class="fas fa-comments"></i>
+                <div>
+                  <h4>智能对话</h4>
+                  <p>支持多轮对话，上下文理解，情感计算。</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <i class="fas fa-image"></i>
+                <div>
+                  <h4>多模态处理</h4>
+                  <p>支持文本、图像、音频和视频的理解和生成。</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <i class="fas fa-cogs"></i>
+                <div>
+                  <h4>自动化任务</h4>
+                  <p>定制工作流，自动化日常任务处理。</p>
+                </div>
+              </div>
+              
+              <div class="feature-item">
+                <i class="fas fa-chart-line"></i>
+                <div>
+                  <h4>数据分析</h4>
+                  <p>实时数据分析，智能洞察和预测。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- API 文档 -->
+          <section id="ai-api" class="doc-section">
+            <h2>Star AI API 文档</h2>
+            
+            <div class="api-section">
+              <h3>认证</h3>
+              <p>所有 API 调用都需要在请求头中包含 API 密钥：</p>
+              
+              <div class="code-block">
+                <pre><code class="language-javascript">const headers = {
+  'Authorization': 'Bearer your-api-key',
+  'Content-Type': 'application/json'
+};</code></pre>
+              </div>
+            </div>
+            
+            <div class="api-section">
+              <h3>对话 API</h3>
+              <div class="api-endpoint">
+                <span class="method post">POST</span>
+                <span class="url">/api/v1/chat</span>
+              </div>
+              
+              <h4>请求参数</h4>
+              <table class="api-table">
+                <thead>
+                  <tr>
+                    <th>参数</th>
+                    <th>类型</th>
+                    <th>必需</th>
+                    <th>说明</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>message</td>
+                    <td>string</td>
+                    <td>是</td>
+                    <td>用户输入的消息</td>
+                  </tr>
+                  <tr>
+                    <td>context</td>
+                    <td>string</td>
+                    <td>否</td>
+                    <td>对话上下文</td>
+                  </tr>
+                  <tr>
+                    <td>model</td>
+                    <td>string</td>
+                    <td>否</td>
+                    <td>使用的模型名称</td>
+                  </tr>
+                  <tr>
+                    <td>temperature</td>
+                    <td>number</td>
+                    <td>否</td>
+                    <td>创造性参数 (0-1)</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h4>响应示例</h4>
+              <div class="code-block">
+                <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "id": "chat-123456",
+    "content": "你好！我是 Star AI，很高兴和你对话。",
+    "model": "star-gpt-v1",
+    "usage": {
+      "tokens": 45,
+      "cost": 0.001
+    },
+    "timestamp": "2024-01-01T12:00:00Z"
+  }
+}</code></pre>
+              </div>
+            </div>
+          </section>
+          
+          <!-- 更多章节... -->
+          <section id="bcs-overview" class="doc-section">
+            <h2>BCS 项目概述</h2>
+            <p>Battlefield Commander Simulator (BCS) 是一个开源的策略游戏项目，由 dengruixun 主导开发。</p>
+            
+            <div class="project-stats">
+              <div class="stat-item">
+                <i class="fab fa-github"></i>
+                <div>
+                  <h4>GitHub 仓库</h4>
+                  <p><a href="https://github.com/xigou1834/Battlefield-Commander-Simulator" target="_blank">查看源码</a></p>
+                </div>
+              </div>
+              
+              <div class="stat-item">
+                <i class="fas fa-code-branch"></i>
+                <div>
+                  <h4>开发状态</h4>
+                  <p>活跃开发中</p>
+                </div>
+              </div>
+              
+              <div class="stat-item">
+                <i class="fas fa-users"></i>
+                <div>
+                  <h4>贡献者</h4>
+                  <p>欢迎参与</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
 
   <div id="footer"></div>
 
   <script src="component-loader.js"></script>
+  <script src="style-switcher.js"></script>
+  
+  <script>
+    // 导航功能
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = document.querySelectorAll('.doc-section');
+      
+      // 点击导航链接
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            
+            // 更新活跃状态
+            navLinks.forEach(l => l.classList.remove('active'));
+            this.classList.add('active');
+          }
+        });
+      });
+      
+      // 滚动监听
+      window.addEventListener('scroll', function() {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+  
+  <style>
+    .documentation-layout {
+      display: flex;
+      max-width: 1400px;
+      margin: 0 auto;
+      gap: 30px;
+      padding: 20px;
+    }
+    
+    .docs-sidebar {
+      width: 300px;
+      position: sticky;
+      top: 80px;
+      height: fit-content;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 25px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sidebar-content h2 {
+      margin-bottom: 25px;
+      color: #333;
+      font-size: 1.3em;
+    }
+    
+    .nav-section {
+      margin-bottom: 25px;
+    }
+    
+    .nav-section h3 {
+      color: #667eea;
+      font-size: 1em;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    
+    .nav-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .nav-section li {
+      margin-bottom: 5px;
+    }
+    
+    .nav-link {
+      display: block;
+      padding: 8px 12px;
+      color: #666;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-size: 14px;
+    }
+    
+    .nav-link:hover {
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+    }
+    
+    .nav-link.active {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+    
+    .docs-content {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      padding: 40px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+    
+    .docs-header {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid rgba(102, 126, 234, 0.2);
+    }
+    
+    .docs-header h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .docs-header p {
+      color: #666;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    
+    .doc-section {
+      margin-bottom: 50px;
+      scroll-margin-top: 100px;
+    }
+    
+    .doc-section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+      border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+      padding-bottom: 10px;
+    }
+    
+    .doc-section h3 {
+      font-size: 1.4em;
+      margin: 25px 0 15px;
+      color: #667eea;
+    }
+    
+    .doc-section h4 {
+      font-size: 1.2em;
+      margin: 20px 0 10px;
+      color: #333;
+    }
+    
+    .doc-section p {
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+    
+    .product-item {
+      background: rgba(102, 126, 234, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+    
+    .product-item .product-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+    }
+    
+    .product-item .product-icon i {
+      color: white;
+      font-size: 20px;
+    }
+    
+    .product-item h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    
+    .code-block {
+      margin: 20px 0;
+      background: #2d3748;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .code-block h3 {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 15px 20px;
+      margin: 0 0 0 0;
+      font-size: 1em;
+    }
+    
+    .code-block pre {
+      margin: 0;
+      padding: 20px;
+      overflow-x: auto;
+    }
+    
+    .code-block code {
+      color: #e2e8f0;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    
+    .feature-list {
+      margin: 25px 0;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: rgba(102, 126, 234, 0.05);
+      border-radius: 12px;
+    }
+    
+    .feature-item i {
+      color: #667eea;
+      font-size: 20px;
+      margin-top: 2px;
+    }
+    
+    .feature-item h4 {
+      margin: 0 0 8px 0;
+      color: #333;
+    }
+    
+    .feature-item p {
+      margin: 0;
+      color: #666;
+    }
+    
+    .api-endpoint {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 15px 0;
+      padding: 10px 15px;
+      background: rgba(102, 126, 234, 0.1);
+      border-radius: 8px;
+      font-family: monospace;
+    }
+    
+    .method {
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 12px;
+      color: white;
+    }
+    
+    .method.post {
+      background: #10b981;
+    }
+    
+    .method.get {
+      background: #3b82f6;
+    }
+    
+    .url {
+      color: #333;
+      font-weight: 500;
+    }
+    
+    .api-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    
+    .api-table th,
+    .api-table td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    }
+    
+    .api-table th {
+      background: rgba(102, 126, 234, 0.1);
+      font-weight: 600;
+      color: #333;
+    }
+    
+    .api-table td {
+      color: #666;
+    }
+    
+    .project-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+    
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      padding: 20px;
+      background: rgba(102, 126, 234, 0.05);
+      border-radius: 12px;
+    }
+    
+    .stat-item i {
+      color: #667eea;
+      font-size: 24px;
+    }
+    
+    .stat-item h4 {
+      margin: 0 0 5px 0;
+      color: #333;
+    }
+    
+    .stat-item p {
+      margin: 0;
+      color: #666;
+    }
+    
+    .stat-item a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    .stat-item a:hover {
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 1024px) {
+      .documentation-layout {
+        flex-direction: column;
+      }
+      
+      .docs-sidebar {
+        width: 100%;
+        position: static;
+      }
+      
+      .nav-section {
+        display: inline-block;
+        margin-right: 30px;
+        vertical-align: top;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .documentation-layout {
+        padding: 10px;
+      }
+      
+      .docs-content {
+        padding: 20px;
+      }
+      
+      .nav-section {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </body>
 </html>

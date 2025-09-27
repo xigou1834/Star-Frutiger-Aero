@@ -1,0 +1,782 @@
+/* Frutiger Aero风格全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e6f7ff 0%, #f0f9ff 25%, #e1f5fe 50%, #e8f5e8 75%, #f1f8e9 100%);
+    color: #1d1d1f;
+    line-height: 1.5;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* 背景装饰泡泡效果 */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 80%, rgba(120, 219, 226, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(120, 226, 160, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(180, 230, 250, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Frutiger Aero风格导航栏 */
+header {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9) 0%, 
+        rgba(240, 248, 255, 0.95) 50%, 
+        rgba(225, 245, 254, 0.9) 100%);
+    backdrop-filter: blur(20px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(120, 219, 226, 0.3);
+    box-shadow: 0 4px 20px rgba(120, 219, 226, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.logo-link {
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 21px;
+    text-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    height: 100%;
+}
+
+.nav-links li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Frutiger Aero风格导航按钮 */
+.nav-links a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 8px 16px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.6) 0%, 
+        rgba(240, 248, 255, 0.4) 50%, 
+        rgba(225, 245, 254, 0.6) 100%);
+    box-shadow: 
+        0 2px 10px rgba(120, 219, 226, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(120, 219, 226, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 4px;
+    backdrop-filter: blur(10px);
+}
+
+.nav-links a:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.1) 0%, 
+        rgba(6, 182, 212, 0.1) 50%, 
+        rgba(16, 185, 129, 0.1) 100%);
+    box-shadow: 
+        0 4px 15px rgba(120, 219, 226, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(120, 219, 226, 0.4);
+}
+
+/* Frutiger Aero下拉菜单样式 */
+.dropdown-content {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(240, 248, 255, 0.9) 50%, 
+        rgba(225, 245, 254, 0.95) 100%);
+    min-width: 180px;
+    box-shadow: 
+        0 8px 32px rgba(120, 219, 226, 0.2),
+        0 0 0 1px rgba(120, 219, 226, 0.1);
+    border-radius: 20px;
+    z-index: 1;
+    padding: 15px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(120, 219, 226, 0.2);
+}
+
+.dropdown:hover .dropdown-content,
+.search-dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #1d1d1f;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    border-radius: 15px;
+    margin: 2px 10px;
+    background: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    box-shadow: none;
+}
+
+.dropdown-content a:hover {
+    background: linear-gradient(135deg, 
+        rgba(14, 165, 233, 0.1) 0%, 
+        rgba(6, 182, 212, 0.1) 50%, 
+        rgba(16, 185, 129, 0.1) 100%);
+    transform: translateX(5px);
+    box-shadow: 
+        0 2px 10px rgba(120, 219, 226, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Frutiger Aero搜索面板样式 */
+.search-panel {
+    width: 300px;
+    padding: 20px;
+    right: 0;
+    left: auto;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.98) 0%, 
+        rgba(240, 248, 255, 0.95) 50%, 
+        rgba(225, 245, 254, 0.98) 100%);
+}
+
+.search-panel form {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-panel input {
+    width: 100%;
+    padding: 12px 45px 12px 20px;
+    border: 2px solid rgba(120, 219, 226, 0.3);
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9) 0%, 
+        rgba(240, 248, 255, 0.7) 100%);
+    box-shadow: 
+        inset 0 2px 4px rgba(120, 219, 226, 0.1),
+        0 0 0 0 rgba(14, 165, 233, 0);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.search-panel input:focus {
+    border-color: rgba(14, 165, 233, 0.5);
+    box-shadow: 
+        inset 0 2px 4px rgba(120, 219, 226, 0.1),
+        0 0 0 4px rgba(14, 165, 233, 0.1);
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(240, 248, 255, 0.9) 100%);
+}
+
+.search-panel button {
+    position: absolute;
+    right: 8px;
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    border: none;
+    cursor: pointer;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(14, 165, 233, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-panel button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+}
+
+/* 主内容区样式 */
+main {
+    padding-top: 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 22px;
+    max-width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(120, 219, 226, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 1.07143;
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(14, 165, 233, 0.3);
+}
+
+.hero p {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #4a5568;
+    line-height: 1.10722;
+}
+
+/* Frutiger Aero风格CTA按钮 */
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #10b981 100%);
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 
+        0 8px 25px rgba(14, 165, 233, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.cta-link:hover::before {
+    left: 100%;
+}
+
+.cta-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 12px 35px rgba(14, 165, 233, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.cta-link i {
+    font-size: 16px;
+    margin-left: 8px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cta-link:hover i {
+    transform: translateX(4px);
+}
+
+/* Frutiger Aero风格卡片区域 */
+.news-section, .innovation-section {
+    max-width: 980px;
+    margin: 60px auto;
+    padding: 0 22px;
+}
+
+.news-section h2, .innovation-section h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+/* Frutiger Aero风格卡片设计 */
+.card {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9) 0%, 
+        rgba(240, 248, 255, 0.8) 25%,
+        rgba(225, 245, 254, 0.9) 50%,
+        rgba(233, 247, 239, 0.8) 75%,
+        rgba(240, 253, 244, 0.9) 100%);
+    border-radius: 25px;
+    padding: 35px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(120, 219, 226, 0.2);
+    box-shadow: 
+        0 8px 32px rgba(120, 219, 226, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* 卡片光泽效果 */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+}
+
+/* 卡片内部高光 */
+.card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(120, 219, 226, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border-color: rgba(14, 165, 233, 0.4);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    position: relative;
+    z-index: 1;
+}
+
+.card .date {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.card .desc {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Logo链接样式 */
+.logo-link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: inherit;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Frutiger Aero风格页脚 */
+footer {
+    background: linear-gradient(135deg, 
+        rgba(248, 250, 252, 0.95) 0%, 
+        rgba(241, 245, 249, 0.9) 50%, 
+        rgba(226, 232, 240, 0.95) 100%);
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 80px;
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(120, 219, 226, 0.2);
+    box-shadow: 0 -4px 20px rgba(120, 219, 226, 0.1);
+}
+
+footer p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 8px 0;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 40px;
+    }
+    
+    .hero p {
+        font-size: 20px;
+    }
+    
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links li:not(.search-dropdown) {
+        display: none;
+    }
+    
+    .search-dropdown {
+        margin-left: auto;
+    }
+    
+    .search-panel {
+        width: 280px;
+        right: -70px;
+    }
+    
+    .card {
+        padding: 25px;
+    }
+    
+    .cta-link {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+/* 搜索面板稳定性增强 */
+.search-panel {
+    pointer-events: auto;
+}
+
+.search-panel form {
+    pointer-events: auto;
+}
+
+.search-panel input {
+    pointer-events: auto;
+}
+
+.search-panel button {
+    pointer-events: auto;
+}
+
+.dropdown-content {
+    pointer-events: auto;
+}
+
+/* 搜索结果页特定样式 */
+.search-results {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.search-header {
+    margin-bottom: 30px;
+    padding: 30px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.9) 0%, 
+        rgba(240, 248, 255, 0.8) 100%);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(120, 219, 226, 0.2);
+}
+
+.search-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.search-header p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.result-card {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(248, 250, 252, 0.9) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(120, 219, 226, 0.15);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(120, 219, 226, 0.15);
+}
+
+.result-card h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.result-card h2 a {
+    color: #0ea5e9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.result-card h2 a:hover {
+    color: #06b6d4;
+    text-decoration: underline;
+}
+
+.result-card .url {
+    color: #059669;
+    font-size: 14px;
+    margin-bottom: 5px;
+    word-break: break-all;
+}
+
+.result-card .date {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.result-card .snippet {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Frutiger Aero分页样式 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.pagination a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(248, 250, 252, 0.9) 100%);
+    border: 1px solid rgba(120, 219, 226, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+.pagination a:hover, .pagination a.active {
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.pagination a i {
+    font-size: 12px;
+}
+
+/* 汉堡按钮Frutiger Aero风格 */
+.nav-toggle {
+    display: none;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.8) 0%, 
+        rgba(240, 248, 255, 0.9) 100%);
+    border: 1px solid rgba(120, 219, 226, 0.3);
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #0ea5e9;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.nav-toggle:hover {
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* 手机响应式增强 */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(135deg, 
+            rgba(255, 255, 255, 0.98) 0%, 
+            rgba(240, 248, 255, 0.95) 100%);
+        position: absolute;
+        top: 44px;
+        left: 0;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 8px 25px rgba(120, 219, 226, 0.2);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        z-index: 1000;
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(120, 219, 226, 0.2);
+        border-top: none;
+    }
+
+    .nav-links.open {
+        display: flex;
+        max-height: 500px;
+        padding: 15px 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        padding: 12px 20px;
+        font-size: 14px;
+        display: block;
+        margin: 4px 15px;
+        border-radius: 15px;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 15px;
+        margin: 5px 15px;
+        padding: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background: linear-gradient(135deg, 
+            rgba(14, 165, 233, 0.05) 0%, 
+            rgba(6, 182, 212, 0.05) 100%);
+        border: 1px solid rgba(120, 219, 226, 0.1);
+    }
+
+    .dropdown.open > .dropdown-content {
+        max-height: 500px;
+        padding: 8px 0;
+    }
+
+    .dropdown:hover > .dropdown-content {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(0) !important;
+    }
+}
+
+/* 确保搜索面板在输入时保持可见 */
+.search-dropdown.active .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    display: block !important;
+}
+
+/* 防止移动设备上的意外关闭 */
+@media (max-width: 768px) {
+    .search-panel {
+        right: -50px;
+        width: 280px;
+    }
+    
+    .search-dropdown.active .dropdown-content {
+        transition-delay: 0.1s;
+    }
+}

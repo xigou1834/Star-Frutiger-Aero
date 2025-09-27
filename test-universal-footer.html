@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用Footer测试 - Star</title>
+    
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 样式切换系统 -->
+    <script src="style-switcher.js"></script>
+    <script src="component-loader.js"></script>
+</head>
+<body>
+    <!-- Header区域 -->
+    <div id="header"></div>
+    
+    <!-- 主要内容 -->
+    <main>
+        <div class="container">
+            <h1>通用Footer样式切换测试</h1>
+            <p>这个页面使用通用的footer.html，按钮会根据当前主题智能调整样式。</p>
+            
+            <div class="content-section">
+                <h2>智能Footer按钮特性</h2>
+                <ul>
+                    <li><strong>智能检测:</strong> 自动检测当前主题并调整按钮外观</li>
+                    <li><strong>动态文本:</strong> 按钮文字会根据当前主题显示切换目标</li>
+                    <li><strong>图标变化:</strong> 图标会根据当前主题改变（Apple风格显示✨，Frutiger风格显示🍎）</li>
+                    <li><strong>样式适配:</strong> 按钮颜色会匹配当前主题的设计语言</li>
+                    <li><strong>实时更新:</strong> 切换主题后按钮会立即更新状态</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h2>测试流程</h2>
+                <ol>
+                    <li>观察当前footer按钮的样式和文字</li>
+                    <li>点击footer中的切换按钮</li>
+                    <li>注意按钮样式、文字和图标的变化</li>
+                    <li>再次点击验证双向切换功能</li>
+                    <li>刷新页面确认状态保持</li>
+                </ol>
+            </div>
+            
+            <div class="status-display">
+                <h3>当前状态</h3>
+                <div id="current-status" class="status-info">加载中...</div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- 使用通用Footer -->
+    <div id="footer"></div>
+    
+    <script>
+        // 显示当前状态
+        function updateStatus() {
+            const statusDiv = document.getElementById('current-status');
+            const currentTheme = localStorage.getItem('website-style') || 'original';
+            const themeName = currentTheme === 'original' ? 'Apple经典风格' : 'Frutiger Aero未来风格';
+            const nextTheme = currentTheme === 'original' ? 'Frutiger Aero未来风格' : 'Apple经典风格';
+            
+            statusDiv.innerHTML = `
+                <p><strong>当前主题:</strong> <span class="theme-badge ${currentTheme}">${themeName}</span></p>
+                <p><strong>下次切换到:</strong> <span class="theme-badge ${currentTheme === 'original' ? 'frutiger' : 'original'}">${nextTheme}</span></p>
+                <p><strong>Footer按钮:</strong> 已适配为${currentTheme === 'original' ? 'Apple' : 'Frutiger'}风格</p>
+            `;
+        }
+        
+        // 监听主题变化
+        let lastTheme = localStorage.getItem('website-style') || 'original';
+        
+        function checkThemeChange() {
+            const currentTheme = localStorage.getItem('website-style') || 'original';
+            if (currentTheme !== lastTheme) {
+                lastTheme = currentTheme;
+                updateStatus();
+            }
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                updateStatus();
+                // 定期检查主题变化
+                setInterval(checkThemeChange, 100);
+            }, 1000);
+        });
+    </script>
+    
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 22px;
+            min-height: 60vh;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .content-section {
+            margin: 30px 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .content-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .content-section ul,
+        .content-section ol {
+            margin-left: 20px;
+        }
+        
+        .content-section li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .status-display {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .status-display h3 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #444;
+        }
+        
+        .status-info {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .status-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .theme-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .theme-badge.original {
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+        }
+        
+        .theme-badge.frutiger {
+            background: linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #3b82f6 100%);
+        }
+    </style>
+</body>
+</html>

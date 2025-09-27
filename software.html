@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Star</title>
+  <title>软件中心 - Star</title>
+  
+  <meta name="description" content="Star 软件中心，提供各种开源工具和实用软件下载。" />
+  
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -13,25 +16,663 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <img src="preload.svg" alt="示例动图" width="100" height="100" />
-        <h1>正在开发...</h1>
-        <p>您可以加入我们</p>
-        <p>凭借先进的技术和创新的设计，Star让未来更加光明。</p>
+        <h1>软件中心</h1>
+        <p>探索、下载和使用 Star 开发的各种软件工具。</p>
+        <p>所有软件均开源且免费提供，支持多平台运行。</p>
+      </div>
+    </section>
+
+    <section class="software-section">
+      <div class="software-container">
+        <!-- 游戏软件 -->
+        <div class="software-category">
+          <h2><i class="fas fa-gamepad"></i> 游戏软件</h2>
+          
+          <div class="software-grid">
+            <div class="software-card featured">
+              <div class="software-header">
+                <div class="software-icon">
+                  <i class="fas fa-chess"></i>
+                </div>
+                <div class="software-status">
+                  <span class="status-badge alpha">公测版</span>
+                </div>
+              </div>
+              
+              <div class="software-content">
+                <h3>Battlefield Commander Simulator</h3>
+                <p class="software-subtitle">战地指挥官模拟器</p>
+                
+                <p class="software-description">
+                  一款高度拟真的战术策略游戏，结合 AI 技术和现代游戏引擎，为玩家提供真实的指挥体验。
+                </p>
+                
+                <div class="software-features">
+                  <span class="feature-tag">AI 驱动</span>
+                  <span class="feature-tag">多人在线</span>
+                  <span class="feature-tag">实时策略</span>
+                  <span class="feature-tag">3D 渲染</span>
+                </div>
+                
+                <div class="software-meta">
+                  <div class="meta-item">
+                    <i class="fas fa-download"></i>
+                    <span>2.1K 下载</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.8/5</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fas fa-hdd"></i>
+                    <span>1.2 GB</span>
+                  </div>
+                </div>
+                
+                <div class="software-platforms">
+                  <span class="platform"><i class="fab fa-windows"></i> Windows</span>
+                  <span class="platform"><i class="fab fa-apple"></i> macOS</span>
+                  <span class="platform"><i class="fab fa-linux"></i> Linux</span>
+                </div>
+                
+                <div class="software-actions">
+                  <a href="https://github.com/xigou1834/Battlefield-Commander-Simulator/releases" 
+                     target="_blank" class="btn-primary">
+                    <i class="fas fa-download"></i> 下载游戏
+                  </a>
+                  <a href="https://github.com/xigou1834/Battlefield-Commander-Simulator" 
+                     target="_blank" class="btn-secondary">
+                    <i class="fab fa-github"></i> 源码
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 开发工具 -->
+        <div class="software-category">
+          <h2><i class="fas fa-code"></i> 开发工具</h2>
+          
+          <div class="software-grid">
+            <div class="software-card">
+              <div class="software-header">
+                <div class="software-icon">
+                  <i class="fas fa-robot"></i>
+                </div>
+                <div class="software-status">
+                  <span class="status-badge development">开发中</span>
+                </div>
+              </div>
+              
+              <div class="software-content">
+                <h3>Star AI SDK</h3>
+                <p class="software-subtitle">人工智能开发套件</p>
+                
+                <p class="software-description">
+                  为开发者提供的 AI 集成工具，支持多种编程语言和框架，让 AI 功能集成变得简单。
+                </p>
+                
+                <div class="software-features">
+                  <span class="feature-tag">REST API</span>
+                  <span class="feature-tag">SDK</span>
+                  <span class="feature-tag">多语言</span>
+                  <span class="feature-tag">云原生</span>
+                </div>
+                
+                <div class="software-meta">
+                  <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>即将发布</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span>v0.1.0</span>
+                  </div>
+                </div>
+                
+                <div class="software-platforms">
+                  <span class="platform"><i class="fab fa-js-square"></i> JavaScript</span>
+                  <span class="platform"><i class="fab fa-python"></i> Python</span>
+                  <span class="platform"><i class="fas fa-coffee"></i> Java</span>
+                </div>
+                
+                <div class="software-actions">
+                  <button class="btn-primary" onclick="showComingSoon()">
+                    <i class="fas fa-clock"></i> 即将发布
+                  </button>
+                  <a href="Technical documentation.html" class="btn-secondary">
+                    <i class="fas fa-book"></i> 文档
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="software-card">
+              <div class="software-header">
+                <div class="software-icon">
+                  <i class="fas fa-palette"></i>
+                </div>
+                <div class="software-status">
+                  <span class="status-badge stable">稳定版</span>
+                </div>
+              </div>
+              
+              <div class="software-content">
+                <h3>Frutiger Aero Theme</h3>
+                <p class="software-subtitle">网站主题模板</p>
+                
+                <p class="software-description">
+                  现代化的网站主题模板，采用 Frutiger Aero 设计风格，支持样式切换和响应式设计。
+                </p>
+                
+                <div class="software-features">
+                  <span class="feature-tag">HTML/CSS</span>
+                  <span class="feature-tag">JavaScript</span>
+                  <span class="feature-tag">响应式</span>
+                  <span class="feature-tag">可定制</span>
+                </div>
+                
+                <div class="software-meta">
+                  <div class="meta-item">
+                    <i class="fas fa-download"></i>
+                    <span>1.8K 下载</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.9/5</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fas fa-file-archive"></i>
+                    <span>2.3 MB</span>
+                  </div>
+                </div>
+                
+                <div class="software-platforms">
+                  <span class="platform"><i class="fab fa-html5"></i> HTML5</span>
+                  <span class="platform"><i class="fab fa-css3-alt"></i> CSS3</span>
+                  <span class="platform"><i class="fab fa-js"></i> ES6+</span>
+                </div>
+                
+                <div class="software-actions">
+                  <a href="https://github.com/xigou1834/Star-Frutiger-Aero" 
+                     target="_blank" class="btn-primary">
+                    <i class="fas fa-download"></i> 下载主题
+                  </a>
+                  <button class="btn-secondary" onclick="showDemo()">
+                    <i class="fas fa-eye"></i> 在线演示
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 实用工具 -->
+        <div class="software-category">
+          <h2><i class="fas fa-tools"></i> 实用工具</h2>
+          
+          <div class="software-grid">
+            <div class="software-card">
+              <div class="software-header">
+                <div class="software-icon">
+                  <i class="fas fa-terminal"></i>
+                </div>
+                <div class="software-status">
+                  <span class="status-badge concept">概念版</span>
+                </div>
+              </div>
+              
+              <div class="software-content">
+                <h3>Star CLI</h3>
+                <p class="software-subtitle">命令行工具集</p>
+                
+                <p class="software-description">
+                  集成多种常用开发工具的命令行应用，提高开发效率，简化工作流程。
+                </p>
+                
+                <div class="software-features">
+                  <span class="feature-tag">项目管理</span>
+                  <span class="feature-tag">代码生成</span>
+                  <span class="feature-tag">部署工具</span>
+                  <span class="feature-tag">跨平台</span>
+                </div>
+                
+                <div class="software-meta">
+                  <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>设计阶段</span>
+                  </div>
+                  <div class="meta-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>概念验证</span>
+                  </div>
+                </div>
+                
+                <div class="software-platforms">
+                  <span class="platform"><i class="fab fa-windows"></i> Windows</span>
+                  <span class="platform"><i class="fab fa-apple"></i> macOS</span>
+                  <span class="platform"><i class="fab fa-linux"></i> Linux</span>
+                </div>
+                
+                <div class="software-actions">
+                  <button class="btn-primary" onclick="showConceptInfo()">
+                    <i class="fas fa-lightbulb"></i> 查看概念
+                  </button>
+                  <button class="btn-secondary" onclick="joinBeta()">
+                    <i class="fas fa-users"></i> 加入讨论
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- 提交软件需求 -->
+    <section class="submit-request">
+      <div class="request-content">
+        <h2>没有找到需要的软件？</h2>
+        <p>告诉我们您的需求，我们将考虑开发相应的解决方案。</p>
+        
+        <form class="request-form" onsubmit="submitRequest(event)">
+          <div class="form-row">
+            <input type="text" placeholder="软件名称" required>
+            <input type="email" placeholder="您的邮箱" required>
+          </div>
+          <textarea placeholder="请描述您的需求...” rows="4" required></textarea>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> 提交需求
+          </button>
+        </form>
       </div>
     </section>
   </main>
 
-  <section class="news-section">
-      <div class="card-container">
-        <div class="card">
-          <div class="logo"><a href="https://fishingblog.netlify.app/posts/Fast_download.html" class="logo-link"><h3>多线程下载器</h3></a></div>
-          <p class="date">Fish_redflying</p>
-        </div>
-      </div>
-    </section>
-
   <div id="footer"></div>
 
   <script src="component-loader.js"></script>
+  <script src="style-switcher.js"></script>
+  
+  <script>
+    function showComingSoon() {
+      if (window.styleSwitcher) {
+        window.styleSwitcher.showNotification('Star AI SDK 即将发布，敬请期待！', 'info', 3000);
+      } else {
+        alert('Star AI SDK 即将发布，敬请期待！');
+      }
+    }
+    
+    function showDemo() {
+      if (window.styleSwitcher) {
+        window.styleSwitcher.showNotification('您当前正在体验该主题！试试右下角的样式切换按钮。', 'success', 4000);
+      } else {
+        alert('您当前正在体验该主题！');
+      }
+    }
+    
+    function showConceptInfo() {
+      if (window.styleSwitcher) {
+        window.styleSwitcher.showNotification('Star CLI 正在概念设计阶段，欢迎在 GitHub 上参与讨论！', 'info', 4000);
+      } else {
+        alert('Star CLI 正在概念设计阶段！');
+      }
+    }
+    
+    function joinBeta() {
+      if (window.styleSwitcher) {
+        window.styleSwitcher.showNotification('欢迎加入我们的 Discord 社区参与讨论！', 'info', 3000);
+      } else {
+        alert('欢迎加入我们的社区！');
+      }
+    }
+    
+    function submitRequest(event) {
+      event.preventDefault();
+      
+      if (window.styleSwitcher) {
+        window.styleSwitcher.showNotification('感谢您的反馈！我们会认真考虑您的建议。', 'success', 3000);
+      } else {
+        alert('感谢您的反馈！');
+      }
+      
+      event.target.reset();
+    }
+  </script>
+  
+  <style>
+    .software-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 22px;
+    }
+    
+    .software-category {
+      margin-bottom: 80px;
+    }
+    
+    .software-category h2 {
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    
+    .software-category h2 i {
+      color: #667eea;
+    }
+    
+    .software-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+    }
+    
+    .software-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .software-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+    
+    .software-card.featured {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      border: 2px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .software-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    .software-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .software-icon i {
+      color: white;
+      font-size: 24px;
+    }
+    
+    .status-badge {
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .status-badge.alpha {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+    }
+    
+    .status-badge.stable {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+    
+    .status-badge.development {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+    }
+    
+    .status-badge.concept {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      color: white;
+    }
+    
+    .software-content h3 {
+      font-size: 1.6em;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    .software-subtitle {
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+    
+    .software-description {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .software-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    
+    .feature-tag {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    
+    .software-meta {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #666;
+      font-size: 13px;
+    }
+    
+    .meta-item i {
+      color: #667eea;
+    }
+    
+    .software-platforms {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+    
+    .platform {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    
+    .software-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-secondary {
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      border: 1px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(102, 126, 234, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .submit-request {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      padding: 80px 22px;
+      margin-top: 60px;
+    }
+    
+    .request-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .request-content h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .request-content p {
+      font-size: 1.1em;
+      color: #666;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+    
+    .request-form {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .request-form input,
+    .request-form textarea {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid rgba(102, 126, 234, 0.2);
+      border-radius: 12px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.8);
+    }
+    
+    .request-form input:focus,
+    .request-form textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+    
+    .request-form textarea {
+      margin-bottom: 25px;
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .submit-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 auto;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    @media (max-width: 768px) {
+      .software-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      
+      .request-form {
+        padding: 25px;
+      }
+      
+      .software-meta {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .software-platforms {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .software-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
 </body>
 </html>

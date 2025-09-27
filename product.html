@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Star</title>
+  <title>产品中心 - Star</title>
+  
+  <meta name="description" content="了解 Star 的核心产品，包括 Star AI 和 Star OS。" />
+  
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
@@ -13,15 +16,537 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <img src="preload.svg" alt="示例动图" width="100" height="100" />
-        <h1>正在开发...</h1>
-        <p>您可以加入我们</p>
-        <p>凭借先进的技术和创新的设计，Star让未来更加光明。</p>
+        <h1>产品中心</h1>
+        <p>探索 Star 的核心产品，体验下一代数字技术。</p>
+        <p>从人工智能到智能系统，我们致力于打造更智能的数字世界。</p>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="products-container">
+        <!-- Star AI -->
+        <div class="product-card featured">
+          <div class="product-header">
+            <div class="product-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="product-badge">开发中</div>
+          </div>
+          
+          <div class="product-content">
+            <h2>Star AI</h2>
+            <p class="product-subtitle">下一代人工智能平台</p>
+            
+            <div class="product-description">
+              <p>Star AI 是我们的旗舰产品，结合了最先进的机器学习算法和直观的用户界面。旨在为个人和企业提供智能化的解决方案。</p>
+            </div>
+            
+            <div class="product-features">
+              <h3>核心特性</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> 智能对话系统</li>
+                <li><i class="fas fa-check"></i> 多模态内容理解</li>
+                <li><i class="fas fa-check"></i> 自动化任务处理</li>
+                <li><i class="fas fa-check"></i> 个性化推荐系统</li>
+                <li><i class="fas fa-check"></i> 实时数据分析</li>
+              </ul>
+            </div>
+            
+            <div class="product-tech">
+              <h3>技术亮点</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">深度学习</span>
+                <span class="tech-tag">自然语言处理</span>
+                <span class="tech-tag">计算机视觉</span>
+                <span class="tech-tag">边缘计算</span>
+              </div>
+            </div>
+            
+            <div class="product-actions">
+              <button class="btn-primary" onclick="showNotification('很快上线！敬请期待。')"> 
+                <i class="fas fa-rocket"></i> 了解更多
+              </button>
+              <button class="btn-secondary" onclick="showNotification('内测版本即将发布！')">
+                <i class="fas fa-flask"></i> 申请内测
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Star OS -->
+        <div class="product-card">
+          <div class="product-header">
+            <div class="product-icon">
+              <i class="fas fa-desktop"></i>
+            </div>
+            <div class="product-badge concept">概念设计</div>
+          </div>
+          
+          <div class="product-content">
+            <h2>Star OS</h2>
+            <p class="product-subtitle">下一代操作系统</p>
+            
+            <div class="product-description">
+              <p>Star OS 将会是下一代操作系统，他不像 Windows 那样复杂，也不像 macOS 那样臃肿。我们要创造一个真正以用户为中心的系统。</p>
+            </div>
+            
+            <div class="product-features">
+              <h3>设计理念</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> 极简交互设计</li>
+                <li><i class="fas fa-check"></i> AI 原生集成</li>
+                <li><i class="fas fa-check"></i> 云原生架构</li>
+                <li><i class="fas fa-check"></i> 无缝多设备协同</li>
+                <li><i class="fas fa-check"></i> 隐私保护优先</li>
+              </ul>
+            </div>
+            
+            <div class="product-tech">
+              <h3>技术框架</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">微内核架构</span>
+                <span class="tech-tag">Rust 开发</span>
+                <span class="tech-tag">WebAssembly</span>
+                <span class="tech-tag">容器化</span>
+              </div>
+            </div>
+            
+            <div class="product-actions">
+              <button class="btn-primary" onclick="showNotification('正在概念设计阶段，敬请期待！')">
+                <i class="fas fa-eye"></i> 预览概念
+              </button>
+              <button class="btn-secondary" onclick="showNotification('文档正在编写中...')">
+                <i class="fas fa-book"></i> 技术文档
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- BCS Project -->
+        <div class="product-card">
+          <div class="product-header">
+            <div class="product-icon">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="product-badge active">开源项目</div>
+          </div>
+          
+          <div class="product-content">
+            <h2>BCS 战地指挥官模拟器</h2>
+            <p class="product-subtitle">Battlefield Commander Simulator</p>
+            
+            <div class="product-description">
+              <p>一个由 dengruixun 主导开发的开源游戏项目，旨在创造一个真实的战术指挥体验。结合了策略游戏和模拟仯真的精华。</p>
+            </div>
+            
+            <div class="product-features">
+              <h3>游戏特色</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> 真实战术模拟</li>
+                <li><i class="fas fa-check"></i> AI 驱动的 NPC</li>
+                <li><i class="fas fa-check"></i> 多玩家在线对战</li>
+                <li><i class="fas fa-check"></i> 模块化地图系统</li>
+                <li><i class="fas fa-check"></i> 实时策略决策</li>
+              </ul>
+            </div>
+            
+            <div class="product-tech">
+              <h3>开发技术</h3>
+              <div class="tech-tags">
+                <span class="tech-tag">Unity 3D</span>
+                <span class="tech-tag">C# 编程</span>
+                <span class="tech-tag">网络同步</span>
+                <span class="tech-tag">AI 算法</span>
+              </div>
+            </div>
+            
+            <div class="product-actions">
+              <a href="https://github.com/xigou1834/Battlefield-Commander-Simulator/" 
+                 target="_blank" class="btn-primary">
+                <i class="fab fa-github"></i> GitHub 仓库
+              </a>
+              <button class="btn-secondary" onclick="showNotification('即将发布首个演示版本！')">
+                <i class="fas fa-download"></i> 下载游戏
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="roadmap-section">
+      <h2>产品路线图</h2>
+      <div class="roadmap-container">
+        <div class="roadmap-item completed">
+          <div class="roadmap-date">2023 Q4</div>
+          <div class="roadmap-content">
+            <h3>项目启动</h3>
+            <p>Star 团队成立，确定技术路线和产品规划。</p>
+          </div>
+        </div>
+        
+        <div class="roadmap-item completed">
+          <div class="roadmap-date">2024 Q1</div>
+          <div class="roadmap-content">
+            <h3>BCS 项目开发</h3>
+            <p>开始 Battlefield Commander Simulator 的核心引擎开发。</p>
+          </div>
+        </div>
+        
+        <div class="roadmap-item current">
+          <div class="roadmap-date">2024 Q3</div>
+          <div class="roadmap-content">
+            <h3>Star AI 原型</h3>
+            <p>开发 Star AI 的核心算法和基础架构。</p>
+          </div>
+        </div>
+        
+        <div class="roadmap-item">
+          <div class="roadmap-date">2025 Q1</div>
+          <div class="roadmap-content">
+            <h3>Star AI Beta</h3>
+            <p>发布 Star AI 的内测版本，开始小范围测试。</p>
+          </div>
+        </div>
+        
+        <div class="roadmap-item">
+          <div class="roadmap-date">2025 Q4</div>
+          <div class="roadmap-content">
+            <h3>Star OS 概念设计</h3>
+            <p>开始 Star OS 的概念设计和技术研究。</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
   <div id="footer"></div>
 
   <script src="component-loader.js"></script>
+  <script src="style-switcher.js"></script>
+  
+  <script>
+    function showNotification(message) {
+      if (window.styleSwitcher) {
+        window.styleSwitcher.showNotification(message, 'info', 3000);
+      } else {
+        alert(message);
+      }
+    }
+  </script>
+  
+  <style>
+    .products-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 22px;
+    }
+    
+    .products-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+    }
+    
+    .product-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    }
+    
+    .product-card.featured {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+      border: 2px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .product-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+    
+    .product-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .product-icon i {
+      color: white;
+      font-size: 24px;
+    }
+    
+    .product-badge {
+      padding: 6px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .product-badge {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+    }
+    
+    .product-badge.active {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+    
+    .product-badge.concept {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      color: white;
+    }
+    
+    .product-content h2 {
+      font-size: 1.8em;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    
+    .product-subtitle {
+      color: #667eea;
+      font-weight: 600;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+    
+    .product-description {
+      margin-bottom: 25px;
+    }
+    
+    .product-description p {
+      color: #666;
+      line-height: 1.7;
+    }
+    
+    .product-features {
+      margin-bottom: 25px;
+    }
+    
+    .product-features h3,
+    .product-tech h3 {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .product-features ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .product-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .product-features li i {
+      color: #10b981;
+      font-size: 12px;
+    }
+    
+    .product-tech {
+      margin-bottom: 30px;
+    }
+    
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    
+    .tech-tag {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    
+    .product-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-secondary {
+      background: rgba(102, 126, 234, 0.1);
+      color: #667eea;
+      border: 1px solid rgba(102, 126, 234, 0.3);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(102, 126, 234, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .roadmap-section {
+      background: rgba(102, 126, 234, 0.05);
+      padding: 80px 22px;
+      margin-top: 60px;
+    }
+    
+    .roadmap-section h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.5em;
+      color: #333;
+    }
+    
+    .roadmap-container {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+    }
+    
+    .roadmap-container::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #667eea, #764ba2);
+      transform: translateX(-50%);
+    }
+    
+    .roadmap-item {
+      display: flex;
+      margin-bottom: 40px;
+      position: relative;
+    }
+    
+    .roadmap-item:nth-child(odd) {
+      flex-direction: row;
+    }
+    
+    .roadmap-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    
+    .roadmap-date {
+      width: 120px;
+      text-align: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      align-self: center;
+      z-index: 2;
+    }
+    
+    .roadmap-content {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      margin: 0 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .roadmap-item.completed .roadmap-content {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    
+    .roadmap-item.current .roadmap-content {
+      background: rgba(102, 126, 234, 0.1);
+      border: 2px solid rgba(102, 126, 234, 0.5);
+      animation: pulse 2s infinite;
+    }
+    
+    .roadmap-content h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    
+    .roadmap-content p {
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
+      50% { box-shadow: 0 8px 35px rgba(102, 126, 234, 0.3); }
+    }
+    
+    @media (max-width: 768px) {
+      .products-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .roadmap-container::before {
+        left: 60px;
+      }
+      
+      .roadmap-item {
+        flex-direction: row !important;
+      }
+      
+      .roadmap-date {
+        width: 100px;
+        font-size: 12px;
+      }
+      
+      .roadmap-content {
+        margin-left: 30px;
+        margin-right: 0;
+      }
+    }
+  </style>
 </body>
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer样式切换测试 - Star</title>
+    
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 样式切换系统 -->
+    <script src="style-switcher.js"></script>
+    <script src="component-loader.js"></script>
+</head>
+<body>
+    <!-- Header区域 -->
+    <div id="header"></div>
+    
+    <!-- 主要内容 -->
+    <main>
+        <div class="container">
+            <h1>Footer样式切换测试</h1>
+            <p>这个页面用来测试footer中的样式切换按钮功能。</p>
+            
+            <div class="content-section">
+                <h2>功能说明</h2>
+                <ul>
+                    <li><strong>Apple风格footer:</strong> 简洁的蓝色渐变按钮，符合Apple设计语言</li>
+                    <li><strong>Frutiger Aero风格footer:</strong> 具有玻璃效果和动画的渐变按钮</li>
+                    <li><strong>智能切换:</strong> 按钮会根据当前主题显示对应的切换目标</li>
+                    <li><strong>持久保存:</strong> 样式选择会保存到localStorage，跨页面保持</li>
+                </ul>
+            </div>
+            
+            <div class="content-section">
+                <h2>测试步骤</h2>
+                <ol>
+                    <li>滚动到页面底部查看footer中的切换按钮</li>
+                    <li>点击footer中的"切换风格"按钮</li>
+                    <li>观察整个页面样式的变化</li>
+                    <li>注意footer按钮的样式也会相应改变</li>
+                    <li>可以刷新页面验证样式选择是否被保存</li>
+                </ol>
+            </div>
+            
+            <div class="demo-buttons">
+                <button class="demo-btn" onclick="showCurrentTheme()">显示当前主题</button>
+                <button class="demo-btn" onclick="showStoredTheme()">显示存储的主题</button>
+            </div>
+            
+            <div id="theme-info" class="theme-info"></div>
+        </div>
+    </main>
+    
+    <!-- Footer区域 -->
+    <div id="footer"></div>
+    
+    <script>
+        // 显示当前主题信息
+        function showCurrentTheme() {
+            const current = window.styleSwitcher ? window.styleSwitcher.currentStyle : '未知';
+            const info = document.getElementById('theme-info');
+            info.innerHTML = `<p><strong>当前激活主题:</strong> ${current === 'original' ? 'Apple经典风格' : 'Frutiger Aero未来风格'}</p>`;
+        }
+        
+        // 显示存储的主题信息
+        function showStoredTheme() {
+            const stored = localStorage.getItem('website-style') || 'original';
+            const info = document.getElementById('theme-info');
+            info.innerHTML = `<p><strong>存储的主题:</strong> ${stored === 'original' ? 'Apple经典风格' : 'Frutiger Aero未来风格'}</p>`;
+        }
+        
+        // 页面加载完成后显示当前主题
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                showCurrentTheme();
+            }, 1000);
+        });
+    </script>
+    
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 22px;
+            min-height: 60vh;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .content-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .content-section h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .content-section ul,
+        .content-section ol {
+            margin-left: 20px;
+        }
+        
+        .content-section li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .demo-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .demo-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 24px;
+            margin: 0 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .theme-info {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: rgba(100, 200, 100, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(100, 200, 100, 0.3);
+        }
+        
+        .theme-info p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 500;
+            color: #2d5a2d;
+        }
+    </style>
+</body>
+</html>
