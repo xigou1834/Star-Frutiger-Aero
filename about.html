@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>关于我们 - Star</title>
+  
+  <!-- 基础样式文件 -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- 动态主题样式文件 -->
+  <link id="theme-style" rel="stylesheet" href="style-original.css" data-theme="original" />
+  <!-- Font Awesome图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <!-- 加载状态 -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">加载中...</div>
+  </div>
+
+  <!-- Header区域 -->
+  <div id="header"></div>
+
+  <!-- 主要内容 -->
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>关于Star团队</h1>
+        <p>我们是一群充满激情的开发者，致力于创造更美好的数字未来。</p>
+        <p>通过创新的技术和用户体验设计，我们让复杂的事情变得简单。</p>
+      </div>
+    </section>
+
+    <section class="news-section">
+      <h2>团队成员</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>dengruixun</h3>
+          <p class="desc">项目创始人和首席开发者，专注于系统架构和核心功能开发。</p>
+          <p class="date">加入时间：2023年</p>
+        </div>
+        <div class="card">
+          <h3>技术团队</h3>
+          <p class="desc">由经验丰富的工程师组成，负责产品的技术实现和质量保证。</p>
+          <p class="date">团队规模：持续扩大中</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="innovation-section">
+      <h2>我们的价值观</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>创新驱动</h3>
+          <p class="desc">我们相信技术的力量，通过持续创新为用户创造价值。</p>
+        </div>
+        <div class="card">
+          <h3>用户至上</h3>
+          <p class="desc">用户体验是我们设计和开发过程中的第一考量因素。</p>
+        </div>
+        <div class="card">
+          <h3>开放协作</h3>
+          <p class="desc">我们倡导开源精神，与社区一起构建更好的技术生态。</p>
+        </div>
+        <div class="card">
+          <h3>持续学习</h3>
+          <p class="desc">在快速变化的技术世界中，我们保持学习和进步的热情。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer区域 -->
+  <div id="footer"></div>
+
+  <!-- 样式切换按钮 -->
+  <div id="style-switcher-container"></div>
+
+  <!-- 核心脚本 -->
+  <script src="component-loader.js"></script>
+  <script src="style-switcher.js"></script>
+  <script id="theme-script" src="script-original.js" data-theme="original"></script>
+</body>
+</html>
